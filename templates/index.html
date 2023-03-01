@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Yolov5_face_recognition</title>
+        {% include 'bootstrap.html' %}
+    </head>
+    <body>
+        {% include 'navbar.html' %}
+        {% include 'banner.html' %}
+        <div class="text-center mt-2 mb-4">
+            <form action="/video" method="post">
+                <input type="radio" name="model" value="my_face_recognition_model" required />
+                <label for="custom_model"> my_face_recognition_model </label><br>
+                <input type="radio" name="model" value="yolov5s" required />
+                <label for="pretrain_model"> yolov5s model </label><br>
+                    <button type="submit" class="btn btn-dark"> Start Detection </button>
+            </form>
+        </div>
+    
+        {% include 'footer.html' %}
+    </body>
+</html>
